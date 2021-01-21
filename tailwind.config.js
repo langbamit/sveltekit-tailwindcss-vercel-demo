@@ -13,14 +13,6 @@ module.exports = {
     content: ["./src/**/*.svelte", "./src/app.html"],
     options: {
       defaultExtractor: (content) => PurgeSvelte.extract(content)
-      //  (content) => {
-      //   let classes = tailwindExtractor(content);
-      //   // (content.match(/(?<=class:)[^=>\/\s]*/g) || []).forEach(value => {
-      //   //   classes = [...classes, ...value.split(',').map(s => s.trim()).filter(Boolean)]
-      //   // })
-      //   // console.log(classes)
-      //   return [...classes, ...[...content.matchAll(/(?:class:)*([\w\d-/:%.]+)/gm)].map(([_match, group, ..._rest]) => group)];
-      // }
     }
   },
   theme: {
@@ -30,7 +22,5 @@ module.exports = {
   variants: {
   },
   plugins: [
-    require("@tailwindcss/forms"),
-    require("@tailwindcss/typography"),
   ],
 };
